@@ -1,0 +1,42 @@
+.header {
+    width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    a {
+        font-size: 15px;
+    }
+}
+
+#myCarousel {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    display: inline-block;
+    width: 186px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.logo,
+.nav {
+    float: left;
+}
+
+.nav {
+    margin-left: 142px;
+    margin-top: 12px;
+    a {
+        display: inline-block;
+        width: 62px;
+        height: 46px;
+        margin: 0 6px;
+        text-align: center;
+        line-height: 46px;
+    }
+}
+
+.use {
+    float: right;
+}
