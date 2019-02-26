@@ -309,12 +309,36 @@ $red:#FF5715;
 }
 
 .about {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
     img {
         width: 119px;
         height: 119px;
+        padding:10px ;
+        background: #333;
     }
-    ul li {
-        list-style-type: none;
+    ul {
+        margin-left: -3em;
+        li {
+            list-style-type: none;
+            float: left;
+            margin-right: 28px;
+            a{
+                font-size: 12px;
+                color: #555555;
+            }
+        }
+    }
+    .lianxi{
+        margin-left: -15px;
+        font-size: 12px;
+        color: #555555;
+
+    }
+    .xcx{
+        margin-left: -24px;
     }
 }
 
