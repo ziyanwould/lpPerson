@@ -1,5 +1,6 @@
 $color:#333;
 $red:#FF5715;
+$hover:#337ab7;
 .header {
     width: 1200px;
     height: 70px;
@@ -91,6 +92,10 @@ $red:#FF5715;
     a {
         text-decoration: none;
         color: $color;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $hover;
     }
     img {
         display: inline-block;
@@ -103,6 +108,7 @@ $red:#FF5715;
             display: inline-block;
             font-size: 15px;
             color: #999999;
+            font-weight: 600;
         }
         .active {
             color: $color;
@@ -110,6 +116,8 @@ $red:#FF5715;
             font-size: 15px;
             padding-bottom: 15px;
             border-bottom: 1px solid #2E2E2E;
+            // transition: color .3s ease-in-out;
+            // transition: border-bottom .3s ease-in-out;
         }
         .jz {
             margin-right: 24px;
@@ -139,11 +147,15 @@ $red:#FF5715;
     width: 1215px;
     margin: 0 auto;
     .title {
+        max-width: 280px;
         float: left;
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
         color: $color;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     .pay {
         float: right;
@@ -177,6 +189,10 @@ $red:#FF5715;
     .comname {
         color: $color;
         font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 290px;
     }
     .companyCity {
         font-size: 12px;
@@ -201,6 +217,7 @@ $red:#FF5715;
     padding: 12px 0px;
     background: #F6F6F6;
     margin-top: 20px;
+    margin-left: -7.5px;
 }
 
 .show2 {
@@ -223,6 +240,11 @@ $red:#FF5715;
         line-height: 45px;
         border: 1px solid #E7E7E7;
         margin-top: 20px;
+        text-decoration: none;
+        color: $color;
+    }
+    a:hover {
+        color: $hover;
     }
 }
 
@@ -241,12 +263,38 @@ $red:#FF5715;
         border: 1px solid #E7E7E7;
         margin: 10px -7.5px;
     }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: $color;
+        max-width: 180px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    a:hover {
+        color: $hover;
+        transition: all 0.5s ease-in;
+    }
 }
 
 .lpzx {
     width: 1215px;
     margin: 0 auto;
     font-size: 12px;
+    a {
+        display: block;
+        text-decoration: none;
+        color: $color;
+        max-width: 240px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    a:hover {
+        color: $hover;
+        transition: all .3s ease-in-out;
+    }
     .show {
         border: 1px solid #E7E7E7;
         margin: 30px -7.5px;
@@ -267,10 +315,21 @@ $red:#FF5715;
     }
     li {
         line-height: 25px;
+        list-style-type: none;
+    }
+    em {
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        border-radius: 6px;
+        background: $color;
+        position: relative;
+        top: 12px;
+        margin-right: 5px;
     }
     img {
         display: inline-block;
-        padding-left: 40px;
+        margin-left: 40px;
         margin-bottom: 50px;
     }
     ul {
@@ -278,7 +337,7 @@ $red:#FF5715;
     }
     .right {
         img {
-            padding-left: 10px;
+            margin-left: 10px;
         }
         ul {
             margin-left: 10px;
@@ -306,6 +365,16 @@ $red:#FF5715;
     margin: 0 auto;
     padding: 20px 0 30px 0px;
     border-bottom: 1px solid #E7E7E7;
+    a {
+        display: inline-block;
+        color: $color;
+        margin-right: 10px;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $hover;
+        transition: all 0.5s ease-in;
+    }
 }
 
 .about {
@@ -316,33 +385,34 @@ $red:#FF5715;
     img {
         width: 119px;
         height: 119px;
-        padding:10px ;
-        background: #333;
+        padding: 10px;
+        background: #F3F3F3;
     }
     ul {
         margin-left: -3em;
         li {
             list-style-type: none;
             float: left;
+            padding-bottom: 6px;
             margin-right: 28px;
-            a{
+            a {
                 font-size: 12px;
                 color: #555555;
             }
         }
     }
-    .lianxi{
+    .lianxi {
         margin-left: -15px;
         font-size: 12px;
         color: #555555;
-
     }
-    .xcx{
+    .xcx {
         margin-left: -24px;
     }
 }
 
 .foot {
+    width: 100%;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -351,5 +421,82 @@ $red:#FF5715;
         text-decoration: none;
         color: #999999;
         font-size: 13px;
+    }
+}
+
+.liebiao2 {
+    display: none;
+}
+
+.liebiao1,
+.liebiao2 {
+    .col-md-12 {
+        margin-left: -7.5px;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+    }
+    .detail:hover .title {
+        color: $hover;
+        transition: all .3s ease-in-out;
+    }
+    .companys:hover .comname {
+        color: $hover;
+        transition: all .3s ease-in-out;
+    }
+    .show1:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease-in;
+    }
+    .show2:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease-in;
+        // cursor: pointer;
+    }
+}
+
+.use {
+    a {
+        text-decoration: none;
+    }
+}
+
+.ck {
+    width: 80px;
+    height: 28px;
+    display: inline-block;
+    text-align: center;
+    line-height: 28px;
+    background: #FC4C24;
+    color: #FFF;
+    border-radius: 3px;
+}
+
+.ck:hover {
+    background: #EA3E45;
+    color: #FFF;
+}
+
+.show2 div {
+    line-height: 28px;
+}
+
+.lpzx img {
+    width: 133px;
+    height: 101px;
+}
+
+@media (max-width: 990px) {
+    .lpzx img {
+        display: inline-block;
+        margin-left: 10px;
+        margin-bottom: 0;
+    }
+    .lpzx ul {
+        margin-left: -15px;
+    }
+    .lpzx .right ul {
+        margin-left: -15px;
     }
 }

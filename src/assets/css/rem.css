@@ -1,4 +1,6 @@
-html {
-    font-size: 100px!important;
-    font-family: 'ArialMT', 'Arial';
+@media (min-width: 991px) {
+    html {
+        font-size: 100px!important;
+        font-family: 'ArialMT', 'Arial';
+    }
 }
