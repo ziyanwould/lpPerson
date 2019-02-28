@@ -308,7 +308,7 @@ $hover:#337ab7;
         padding-left: 8px;
         color: $red;
         font-weight: 600;
-        em {
+        span {
             font-size: 12px;
             color: #1E84D6;
         }
@@ -392,7 +392,6 @@ $hover:#337ab7;
         margin-left: -3em;
         li {
             list-style-type: none;
-            float: left;
             padding-bottom: 6px;
             margin-right: 28px;
             a {
@@ -401,13 +400,21 @@ $hover:#337ab7;
             }
         }
     }
+    .fd {
+        li {
+            float: left;
+        }
+    }
     .lianxi {
         margin-left: -15px;
         font-size: 12px;
         color: #555555;
     }
     .xcx {
-        margin-left: -24px;
+        margin-left: 9px;
+    }
+    h6 {
+        font-weight: 600;
     }
 }
 
