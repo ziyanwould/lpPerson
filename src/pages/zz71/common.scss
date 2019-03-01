@@ -1,0 +1,21 @@
+body {
+    font-family: '微软雅黑';
+}
+
+.show {
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+#rank--bg {
+    position: absolute;
+    z-index: 1;
+    top: -2.32rem;
+    left: -21.34%;
+    width: 142.68%;
+    height: 4.68rem;
+    border-radius: 40%;
+    background: linear-gradient(360deg, rgba(255, 185, 0, 1) 0%, rgba(255, 131, 0, 1) 100%);
+}
