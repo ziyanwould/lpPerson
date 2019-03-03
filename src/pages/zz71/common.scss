@@ -1,11 +1,65 @@
+$bili:(1600/1920);
+
 body {
     font-family: '微软雅黑';
 }
 
-.show {
-    img {
-        width: 100px;
-        height: 100px;
+
+.headerFirst{
+    width: 100%;
+    background: #f6f6f6;
+   padding-left: -15px;
+   padding-right: -15px;
+   padding: 6px 0;
+    .detail{
+        width:$bili * 100%;
+        margin: 0 auto;
+    }
+    .ewm{
+        position: relative;
+        .wx,.pho{
+            display: inline-block;
+            position: relative;
+            // top:3px;
+            
+           
+        }
+        .wx{
+            width: 18px;
+            height: 18px;
+         background: url('../../assets/images/zz71/wx.png') no-repeat;
+         background-size:18px 18px;
+         
+        }
+        .pho{
+            width: 19px;
+            height: 18px;
+            background: url('../../assets/images/zz71/pho.png') no-repeat;
+            background-size:19px 18px;
+        }
+        .delv,.xian,.zhuce,.wx,.pho,.phos{
+            float: right;
+        }
+        .delv{
+           
+          
+           
+        }
+        .xian{
+            padding-left: 6px;  
+            padding-right: 6px;
+        }
+    }
+    .weclome{
+        
+    }
+    .shows {
+        display: none;
+        position: absolute;
+        img {
+            width: 100px;
+            height: 100px;
+        }
     }
 }
 
