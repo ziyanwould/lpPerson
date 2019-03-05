@@ -208,7 +208,7 @@ body {
 .navNext {
     width: 100%;
     height: 200px;
-    background: linear-gradient(360deg, rgba(255, 185, 0, 1) 0%, rgba(255, 131, 0, 1) 100%);
+    background: #FFFFFF;
 }
 
 footer {
@@ -293,60 +293,190 @@ footer {
     }
 }
 
-.guidance {
-    font-size: 15px;
-    font-family: "Microsoft YaHei", "Microsoft JhengHei", STHeiti, MingLiu;
-    width: $bili * 100%;
-    height: 45px;
-    margin: 0 auto;
-}
-
 #ljr_zk img {
     width: 15px;
     height: 15px;
     position: relative;
-    left: -5px;
-}
-
-.guidance ul,
-.guidance p {
-    float: left;
-}
-
-.guidance p {
-    width: 224px;
-    text-align: center;
-    height: 45px;
-    line-height: 45px;
-    background: #377EF5;
-}
-
-.guidance p a {
-    color: #ffffff;
-    text-decoration: none;
 }
 
 .guidance {
-    .active {
-        color: #377EF5;
-        transition: all 0.3s ease-in;
+    font-size: 15px;
+    font-family: "Microsoft YaHei", "Microsoft JhengHei", STHeiti, MingLiu;
+    width: $bili * 100%;
+    margin: 0 auto;
+    p,
+    ul {
+        float: left;
+        margin-bottom: 0;
+        li {
+            float: left;
+            list-style: none;
+        }
+    }
+    ul {
+        margin-left: -10px;
+    }
+    p {
+        background: #377EF5;
+        padding: 12px 0;
+        width: 13.4%;
+        text-align: center;
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    }
+    li {
+        a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 30px 12px 0;
+            color: #a5a5a5;
+        }
+        .actives {
+            color: #00a8ff;
+        }
+        a:hover {
+            color: #00a8ff;
+            transition: all 0.3s ease-in;
+        }
     }
 }
 
-.guidance ul li {
-    list-style-type: none;
-    float: left;
-    padding: 0 20px;
-    line-height: 45px;
+
+/*竖立导航*/
+
+#myCarousel {
+    overflow: hidden;
 }
 
-.guidance ul li a {
-    color: #333333;
-    text-decoration: none;
-}
-
-.guidance ul li a:hover {
-    color: #00a8ff;
-    transition: all 0.3s ease-in;
-    // border-bottom: 3px solid #00a8ff;
+.navigation {
+    width: $bili * 100%;
+    height: 100%;
+    overflow: hidden;
+    left: (1-$bili)/2 * 100%;
+    background: rgba(225, 255, 255, 0);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    .navLeft,
+    .navRight {
+        float: left;
+    }
+    .navLeft {
+        width: 13.4%;
+        height: 100%;
+        background: rgba(56, 126, 245, 0.3)
+    }
+    .navLeft a {
+        width: 100%;
+        padding: 10% 0;
+        display: block;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    .navLeft a:hover {
+        color: #e74c3c;
+        background: rgba(245, 245, 245, 0.6);
+        transition: all 0.3s ease-in;
+    }
+    .navRight {
+        width: 86.6%;
+        height: 100%;
+        .show1 {
+            border: 1px solid rgba(14, 8, 8, 0.2);
+            width: 100%;
+            height: 100%;
+            background: url(../../assets/images/zz71/navigation.png) bottom left no-repeat #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            ul {
+                margin-left: -40px;
+            }
+            li {
+                list-style: none;
+            }
+            dd,
+            dt {
+                float: left;
+            }
+            dt {
+                width: 14%;
+                background: url(../../assets/images/zz71/this_right.png) center right no-repeat;
+                a {
+                    display: inline-block;
+                    padding: 15px 20px;
+                    text-align: center;
+                    font-weight: 400;
+                }
+            }
+            dd {
+                width: 86%;
+                a {
+                    padding: 15px 20px;
+                    display: inline-block;
+                }
+                a:hover {
+                    color: #e74c3c;
+                    background: rgba(245, 245, 245, 0.6);
+                    transition: all 0.3s ease-in;
+                }
+            }
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+        }
+        .show2 {
+            width: 100%;
+            height: 100%;
+            .left,
+            .right {
+                float: left;
+            }
+            .left {
+                border-top: 1px solid rgba(14, 8, 8, 0.2);
+                border-bottom: 1px solid rgba(14, 8, 8, 0.2);
+                width: 18%;
+                height: 100%;
+                background: url(../../assets/images/zz71/navigation.png) bottom left no-repeat #fff;
+                a {
+                    width: 100%;
+                    padding: 10% 0;
+                    display: block;
+                    text-align: center;
+                    vertical-align: middle;
+                    text-decoration: none;
+                    color: #333;
+                }
+                a:hover {
+                    color: #e74c3c;
+                    background: rgba(245, 245, 245, 0.6);
+                    transition: all 0.3s ease-in;
+                }
+            }
+            .right {
+                width: 82%;
+                height: 100%;
+                border-top: 1px solid rgba(14, 8, 8, 0.2);
+                border-bottom: 1px solid rgba(14, 8, 8, 0.2);
+                border-right: 1px solid rgba(14, 8, 8, 0.2);
+                background: url(../../assets/images/zz71/navigation.png) bottom left no-repeat #fff;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                a {
+                    padding: 15px 20px;
+                    text-decoration: none;
+                    display: inline-block;
+                    color: #333;
+                }
+                a:hover {
+                    color: #e74c3c;
+                    background: rgba(245, 245, 245, 0.6);
+                    transition: all 0.3s ease-in;
+                }
+            }
+        }
+    }
 }
