@@ -212,3 +212,22 @@ $child:1248;
         }
     }
 }
+
+.seven{
+    width: $bili * 100%;
+    margin: 0 auto;
+    .left,.right{
+        float: left;
+    }
+    .left{
+        width: 79%;
+    }
+    .right{
+        width: 21%;
+    }
+    .child{
+        display: block;
+        padding: 30px 0;
+        border-bottom: 1px solid #EDEDED;
+    }
+}

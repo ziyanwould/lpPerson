@@ -1,0 +1,262 @@
+.third {
+  width: 100%;
+  background: #F3F3F3;
+}
+
+.thirds {
+  width: 83.33333%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 47px;
+}
+
+.thirds .child {
+  padding: 30px 20px 20px 20px;
+  display: block;
+  background: #FFFFFF;
+  margin: 0 1%;
+}
+
+.thirds a {
+  text-decoration: none;
+  color: #666666;
+}
+
+.thirds .toright {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.navSecond {
+  border-bottom: 1px solid #EDEDED;
+}
+
+.navSecond a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  padding-bottom: 16px;
+  margin-right: 30px;
+  color: #7d7d7d;
+}
+
+.navSecond .active {
+  color: #00a8ff;
+  border-bottom: 1px solid #00a8ff;
+}
+
+.navSecond .more {
+  font-size: 14px;
+  float: right;
+}
+
+.four {
+  width: 83.33333%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.four .counts {
+  width: 100%;
+  overflow: hidden;
+}
+
+.four .counts > .left {
+  width: 79%;
+}
+
+.four .counts > .right {
+  width: 21%;
+}
+
+.four .counts > .left,
+.four .counts > .right {
+  float: left;
+}
+
+.four .counts > .left a {
+  display: inline-block;
+  width: 23.39744%;
+  border: 1px solid #E9EAEA;
+  text-align: center;
+  margin-right: 1.20192%;
+  margin-top: 1.32212%;
+}
+
+.four .counts > .left a img {
+  width: 93.15068%;
+  margin-top: 3.42466%;
+}
+
+.four .counts > .right {
+  height: 100%;
+  margin-top: 1.04167%;
+  border: 1px solid #E9EAEA;
+  padding: 0.9009%;
+}
+
+.four .counts > .right h5 {
+  color: #00a0e9;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.four .counts > .right .introd1 {
+  color: #666666;
+}
+
+.four .counts > .right ul {
+  list-style: none;
+  margin-left: -40px;
+}
+
+.four .counts > .right ul .right {
+  float: right;
+}
+
+.four .counts > .right ul .left {
+  float: left;
+}
+
+.five {
+  width: 84.6875%;
+  margin: 0 auto;
+}
+
+.five .child {
+  padding: 10px;
+}
+
+.five a {
+  display: block;
+  border: 1px solid #E9EAEA;
+  text-decoration: none;
+}
+
+.five a img {
+  width: 100%;
+}
+
+.five a h5,
+.five a > p,
+.five a > section {
+  padding-left: 20px;
+}
+
+.five a h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #010101;
+}
+
+.five a > P {
+  color: #666666;
+  font-size: 14px;
+}
+
+.five a section p {
+  float: left;
+}
+
+.five a section span {
+  float: right;
+  border: 1px solid #00a8ff;
+  font-size: 12px;
+  padding: 6px 12px;
+  margin-right: 20px;
+}
+
+.six {
+  width: 84.6875%;
+  margin: 0 auto;
+}
+
+.six .child {
+  padding: 10px;
+}
+
+.six .childs {
+  border: 1px solid #E9EAEA;
+}
+
+.six .headers {
+  background: url(../../assets/images/zz71/zzNav.png) no-repeat top;
+  background-size: 100% 100%;
+  height: 180px;
+  margin-top: -10px;
+  padding: 0;
+}
+
+.six .headers h5 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 82px;
+}
+
+.six .headers p {
+  width: 25%;
+  height: 1px;
+  background: #FFFFFF;
+  margin: 0 auto;
+}
+
+.six ul {
+  list-style: none;
+  margin-left: -40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.six ul li {
+  float: left;
+}
+
+.six ul a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid #7bc4e6;
+  border-radius: 20px;
+  margin: 20px 20px 0 20px;
+}
+
+.six .text-center {
+  margin: 25px 0;
+}
+
+.six .text-center a {
+  border-radius: 30px;
+}
+
+.seven {
+  width: 83.33333%;
+  margin: 0 auto;
+}
+
+.seven .left, .seven .right {
+  float: left;
+}
+
+.seven .left {
+  width: 79%;
+}
+
+.seven .right {
+  width: 21%;
+}
+
+.seven .child {
+  display: block;
+  padding: 30px 0;
+  border-bottom: 1px solid #EDEDED;
+}
