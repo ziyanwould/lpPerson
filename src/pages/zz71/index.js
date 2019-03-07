@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.js'
 
 
 $("#myCarousel").carousel('cycle');
+//$("#myCarousels").carousel('cycle');
 
 export const navs = (x,y,z)=>{
     let num = x+y;
