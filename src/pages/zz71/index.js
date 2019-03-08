@@ -79,8 +79,30 @@ window.onload = function() {
             } 
             });
           
-            console.log(nav.message);
-            
+            //console.log(nav.message);
+            let guid = $(`
+            <div class="navLeft">
+
+            </div>
+            <div class="navRight">
+                <div class="show1" style="display:none">
+                    <ul >
+                    
+                    </ul>
+                </div>
+                <div class="show2 clearfix" style="display:none">
+                    <div class="left" style="display:none">
+                       
+                    </div>
+                    <div class="right" style="display:none">
+
+                       
+
+                    </div>
+                </div>
+            </div>`)
+
+            $('.navigation').append(guid)
             let navs = nav.message;
             let second = {}
             for (let key in navs) {
@@ -98,7 +120,14 @@ window.onload = function() {
              
              $('.navLeft').on( 'mouseenter','a',function(){
             //    console.log($(this).index())
-             $('.show2 .left').html("");
+            if($(this).index()!=0) return;
+            $('.show1').hide();
+            $('.show2').show();
+            $('.show2 .left').html("");
+            $('.show2 .left').show();
+            $('.show2 .right').hide();
+            $(this).addClass('active').siblings().removeClass('active');
+            
              let count = navs[$(this).index()].count;
              second = count;
                     for (let key in count) {
@@ -109,7 +138,9 @@ window.onload = function() {
 
 
              $('.show2 .left').on( 'mouseenter','a',function(){
+                   $(this).addClass('active').siblings().removeClass('active');
                 $('.show2 .right').html("");
+                $('.show2 .right').show();
                 let count = second[$(this).index()].count;
                 for (let key in count) {
                     console.log(count[key].thirdName);
@@ -122,17 +153,47 @@ window.onload = function() {
 
              //多文本展示
              $('.navLeft').on( 'mouseenter','a',function(){
-              
+                $(this).addClass('active').siblings().removeClass('active');
                if( $(this).index()==0) return;
+                 $('.show2,.show2 .left,.show2 .right').hide();
+                 $('.show1').show();
                  $('.show1 ul').html("");
                  let count = navs[$(this).index()].count;
+                 console.log("count",count)
                  second = count;
-                 let li = $('<li></li>')
+                 
                         for (let key in count) {
-                           
+                            let li = $('<li></li>');
+                            let dl =$('<dl class="clearfix"></dl>');
+                            dl.append(`<dt><a href="${count[key].url}" >${count[key].secondName}</a></dt>`)
+
+                            let counts =count[key].count;
+                            let dd = $('<dd></dd>')
+                            for (let key in counts) {
+                          
+                             dd.append(`<a href="${counts[key].url}" >${counts[key].thirdName}</a></dt>`)
+
+                            }  
+                            dl.append(dd);
+                            li.append(dl) ; 
+                            
+                            
+                             $('.show1 ul').append(li)  
                         }
                  })
-    
+                 //移入移除展示
+                 $('.navigation').on( 'mouseleave','.show1',function(){
+                     $(this).hide()
+                 })
+                 $('.navigation').on( 'mouseleave','.show2 .right',function(){
+                    $(this).hide()
+                })
+                $('.navigation').mouseleave(function(){
+                    $('.show1,.show2,.show2 .left,.show2 .right').hide();
+                    $('.navLeft a').removeClass('active');
+                })
+                 
+                 
           
           
         })()

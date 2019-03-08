@@ -383,6 +383,11 @@ footer {
         background: rgba(245, 245, 245, 0.6);
         transition: all 0.3s ease-in;
     }
+    .navLeft .active{
+        color: #e74c3c;
+        background: rgba(245, 245, 245, 0.6);
+        transition: all 0.3s ease-in;
+    }
     .navRight {
         width: 86.6%;
         height: 100%;
@@ -423,6 +428,10 @@ footer {
                     background: rgba(245, 245, 245, 0.6);
                     transition: all 0.3s ease-in;
                 }
+                .active{
+                    color: #e74c3c;
+                    background: rgba(245, 245, 245, 0.6);
+                    transition: all 0.3s ease-in;                }
             }
             a {
                 color: #333;
@@ -455,6 +464,11 @@ footer {
                     color: #e74c3c;
                     background: rgba(245, 245, 245, 0.6);
                     transition: all 0.3s ease-in;
+                }
+                .active{
+                    color: #e74c3c;
+                    background: rgba(245, 245, 245, 0.6);
+                    transition: all 0.3s ease-in; 
                 }
             }
             .right {
