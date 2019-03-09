@@ -4,6 +4,7 @@ import './common.scss'
 import './index.scss'
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.js'
+import {daohang} from'./nav.js'
 import { resolve } from "path";
 const r = path => resolve(__dirname,path);
 
@@ -61,7 +62,10 @@ window.onload = function() {
 
     ///请求导航列表
 
-    let url= './assets/js/messae.json';
+    const url = $('.navigation').data('url');
+  
+    
+     // let url= './assets/js/messae.json';
     // let url= 'https://www.liujiarong.top/js/messae.json';
 
   
@@ -75,124 +79,12 @@ window.onload = function() {
             success:function(data){ 
    
              return data;
-               
+            
             } 
             });
           
-            //console.log(nav.message);
-            let guid = $(`
-            <div class="navLeft">
-
-            </div>
-            <div class="navRight">
-                <div class="show1" style="display:none">
-                    <ul >
-                    
-                    </ul>
-                </div>
-                <div class="show2 clearfix" style="display:none">
-                    <div class="left" style="display:none">
-                       
-                    </div>
-                    <div class="right" style="display:none">
-
-                       
-
-                    </div>
-                </div>
-            </div>`)
-
-            $('.navigation').append(guid)
-            let navs = nav.message;
-            let second = {}
-            for (let key in navs) {
-               // console.log(navs[key].firstName)
-                if(navs[key].target){
-                    $(".navLeft").append(`  <a href="${navs[key].url}"  target="_blank"  class=""> ${navs[key].firstName}</a>`)
-                } 
-                else {
-                    $(".navLeft").append(`  <a href="${navs[key].url}" class=""> ${navs[key].firstName}</a>`)
-                }
-               
-
-            }
-            
-             
-             $('.navLeft').on( 'mouseenter','a',function(){
-            //    console.log($(this).index())
-            if($(this).index()!=0) return;
-            $('.show1').hide();
-            $('.show2').show();
-            $('.show2 .left').html("");
-            $('.show2 .left').show();
-            $('.show2 .right').hide();
-            $(this).addClass('active').siblings().removeClass('active');
-            
-             let count = navs[$(this).index()].count;
-             second = count;
-                    for (let key in count) {
-                        console.log(count[key].secondName);
-                        $('.show2 .left').append(`  <a href="${count[key].url}"  target="_blank"  class=""> ${count[key].secondName}</a>`)
-                    }
-             })
-
-
-             $('.show2 .left').on( 'mouseenter','a',function(){
-                   $(this).addClass('active').siblings().removeClass('active');
-                $('.show2 .right').html("");
-                $('.show2 .right').show();
-                let count = second[$(this).index()].count;
-                for (let key in count) {
-                    console.log(count[key].thirdName);
-                    $('.show2 .right').append(`  <a href="${count[key].url}"  target="_blank"  class=""> ${count[key].thirdName}</a>`)
-                }
-
-             })
-
-
-
-             //多文本展示
-             $('.navLeft').on( 'mouseenter','a',function(){
-                $(this).addClass('active').siblings().removeClass('active');
-               if( $(this).index()==0) return;
-                 $('.show2,.show2 .left,.show2 .right').hide();
-                 $('.show1').show();
-                 $('.show1 ul').html("");
-                 let count = navs[$(this).index()].count;
-                 console.log("count",count)
-                 second = count;
-                 
-                        for (let key in count) {
-                            let li = $('<li></li>');
-                            let dl =$('<dl class="clearfix"></dl>');
-                            dl.append(`<dt><a href="${count[key].url}" >${count[key].secondName}</a></dt>`)
-
-                            let counts =count[key].count;
-                            let dd = $('<dd></dd>')
-                            for (let key in counts) {
-                          
-                             dd.append(`<a href="${counts[key].url}" >${counts[key].thirdName}</a></dt>`)
-
-                            }  
-                            dl.append(dd);
-                            li.append(dl) ; 
-                            
-                            
-                             $('.show1 ul').append(li)  
-                        }
-                 })
-                 //移入移除展示
-                 $('.navigation').on( 'mouseleave','.show1',function(){
-                     $(this).hide()
-                 })
-                 $('.navigation').on( 'mouseleave','.show2 .right',function(){
-                    $(this).hide()
-                })
-                $('.navigation').mouseleave(function(){
-                    $('.show1,.show2,.show2 .left,.show2 .right').hide();
-                    $('.navLeft a').removeClass('active');
-                })
-                 
+    
+            daohang(nav)   
                  
           
           
@@ -201,4 +93,24 @@ window.onload = function() {
  
 
 
+
+/**鼠标移入事件和获得焦距的处理 */
+$('.searchs  .input-lgs').focus(function(){
+   
+    $('.serHistory').show();
+    $('.serHistory').removeClass('fade')
+})
+$('.input-lgs').blur(function(){
+    $('.serHistory').hide()
+})
+$('.serHistory').mouseleave(function(){
+    $(this).hide()
+})
+$('.wx').hover(function(){
+  
+    $(".ewm .shows").show();
+},function(){
+
+    $(".ewm .shows").hide();
+});
 
