@@ -53,7 +53,6 @@ body {
             color: #a5a5a5;
             text-decoration: none;
         }
-        .delv {}
         .xian {
             padding-left: 6px;
             padding-right: 6px;
@@ -66,13 +65,13 @@ body {
             margin-left: 10px;
         }
     }
-    .weclome {}
     .shows {
         padding: 10px 10px 0 10px;
         display: none;
         position: absolute;
         top: 20px;
-        left: 120px;
+        left: unset;
+        right: 40px;
         border: 1px solid #EEEFEE;
         background: #FFFFFF;
         img {
@@ -124,6 +123,7 @@ body {
     img,
     .intre {
         float: left;
+        color: #000000;
     }
     font-family:"黑体";
     font-size: 14px;
@@ -147,7 +147,8 @@ body {
     // margin-top: 10px;
     position: relative;
     p {
-        margin-top: 24px;
+        margin-top: 14px;
+        padding-bottom: 10px;
         padding-left: 18px;
         color: #d4d3d3;
     }
@@ -160,7 +161,7 @@ body {
         margin-left: 15px;
         top: 50px;
         background: #FFFFFF;
-        z-index: 55;
+        z-index: 50;
         li {
             width: 100%;
             a {
@@ -368,16 +369,21 @@ footer {
     .navLeft {
         width: 13.4%;
         height: 100%;
-        background: rgba(56, 126, 245, 0.3)
+        background: rgba(56, 126, 245, 0.3);
     }
     .navLeft a {
         width: 100%;
-        padding: 10% 0;
-        display: block;
-        text-align: center;
-        vertical-align: middle;
+        height: 10%;
+        display: table;
         text-decoration: none;
         color: #FFFFFF;
+    }
+    .navLeft a span {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        /*设置文本水平居中*/
+        width: 100%;
     }
     .navLeft a:hover {
         color: #e74c3c;

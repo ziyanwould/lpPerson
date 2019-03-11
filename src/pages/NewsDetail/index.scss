@@ -1,0 +1,295 @@
+$border:#EEEEEE;
+$banner:#F5F5F5;
+$font:#333333;
+.banner {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    img {
+        width: 100%;
+        height: 100px;
+    }
+}
+
+.route {
+    width: 1200px;
+    margin: 20px auto;
+    img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.fy {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.secondkey {
+    display: none;
+}
+
+.mains {
+    width: 1200px;
+    margin: 0 auto;
+    .left,
+    .right {
+        float: left;
+    }
+    .left {
+        width: 772px;
+    }
+    .right {
+        width: 418px;
+    }
+    .right {
+        margin-left: 10px;
+    }
+    .mainCount {
+        border: 1px solid $banner;
+        border-top: none;
+        padding: 20px;
+        ;
+    }
+    .flei {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        color: #fff;
+        background-color: #FC4C24;
+        border-radius: 40px;
+        margin-left: 20px;
+        margin-right: 33px;
+    }
+    .nav-tabs>li {
+        width: 116px;
+        text-align: center;
+    }
+    .nav-tabs>li.active>a {
+        border-top: 2px solid#FC4C24;
+    }
+    .tab-content {
+        a {
+            display: block;
+        }
+        img {
+            width: 220px;
+            height: 137px;
+        }
+        .media-body {
+            width: 490px;
+        }
+    }
+    .child {
+        padding: 20px 0;
+        border-bottom: 1px solid $border;
+        text-decoration: none;
+        h4 {
+            color: $font;
+            font-weight: 600;
+        }
+        p {
+            color: #999999;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            /** 对象作为伸缩盒子模型显示 **/
+            -webkit-box-orient: vertical;
+            /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+            -webkit-line-clamp: 2;
+            /** 显示的行数 **/
+            overflow: hidden;
+            /** 隐藏超出的内容 **/
+        }
+        .tags {
+            display: inline-block;
+            font-size: 13px;
+            color: #999999;
+            text-align: center;
+            padding: 10px;
+            background: #EAEBEB;
+            margin-right: 10px;
+            margin-top: 13px;
+        }
+        .time {
+            font-size: 12px;
+            float: right;
+            color: #999999;
+            margin-top: 30px
+        }
+    }
+    .child:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease-in;
+    }
+    .newList {
+        margin-top: 5px;
+    }
+    .first,
+    .second {
+        border: 1px solid $banner;
+        margin-bottom: 10px;
+        h3 {
+            font-size: 16px;
+            border-left: 2px solid red;
+            text-indent: 15px;
+            font-weight: 600;
+        }
+        Ul {
+            list-style: none;
+            margin-left: -40px;
+        }
+    }
+    .first {
+        li {
+            padding: 5px 0;
+            .glyphicon {
+                display: inline-block;
+                margin-left: 18px;
+                margin-right: 9px;
+                margin-top: 10px;
+                color: #FDC289;
+            }
+            .glyphicon,
+            .a {
+                float: left;
+            }
+        }
+        li:last-child a {
+            border: none;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            float: left;
+            h4 {
+                font-size: 15px;
+                color: #333333
+            }
+            p {
+                float: left;
+                font-size: 12px;
+                color: #999999
+            }
+            span {
+                float: right;
+                font-size: 12px;
+                color: #999999;
+            }
+            border-bottom: 1px solid $border;
+        }
+        li:hover a {
+            h4,
+            p,
+            span {
+                color: red;
+                transition: all 0.3s ease-in;
+            }
+        }
+        li:hover .glyphicon {
+            color: red;
+            transition: all 0.3s ease-in;
+        }
+    }
+    .second {
+        ul {
+            margin-left: -22px;
+        }
+        li {
+            float: left;
+        }
+        a {
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            padding: 10px;
+            margin: 7.5px 7.5px 7.5px 0;
+            background: linear-gradient(to right, #F76B42, #FA9171);
+            color: #FFFFFF;
+        }
+    }
+}
+
+.detailZz {
+    position: relative;
+    border: 1px solid $banner;
+    padding: 30px;
+    min-height: 762px;
+    padding-bottom: 50px;
+    .h2 {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    .DTags {
+        font-size: 14px;
+        color: #999999;
+        margin-bottom: 20px;
+        span {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+    .myTags {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+    .fl {
+        color: red;
+        margin-right: 15px;
+    }
+    .tags {
+        display: inline-block;
+        padding: 7px 10px;
+        color: #999999;
+        background: #EAEBEB;
+        margin: 0 5px;
+    }
+    .h3 {
+        font-size: 14px;
+        color: #999999;
+    }
+    .h3detail {
+        font-size: 14px;
+        color: #999999;
+        line-height: 28px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border;
+        margin-bottom: 20px;
+    }
+    .otherNav {
+        width: 720px;
+        position: absolute;
+        padding-bottom: 20px;
+        bottom: 0;
+        .left,
+        .right {
+            text-decoration: none;
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            background: #ffae00;
+            background: linear-gradient(to right, #F76B42, #FA9171);
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        .left:hover,
+        .right:hover {
+            background: red;
+            transition: all 0.3s ease-in;
+        }
+    }
+}
