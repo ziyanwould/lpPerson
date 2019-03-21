@@ -13,8 +13,8 @@ $("#myCarousel").carousel('cycle');
 
 $('.lb,.jg').click(function(){
     if($(this).index()==1){
-        $('.jg').find('img').attr("src", r('../../assets/images/9g2.png'));
-        $('.lb').find('img').attr("src", r('../../assets/images/lb1.png'));
+        $('.jg').find('img').attr("src", '.'+ r('../../assets/images/9g2.png'));
+        $('.lb').find('img').attr("src", '.'+ r('../../assets/images/lb1.png'));
        
        
         $('.heng').show();
@@ -23,8 +23,8 @@ $('.lb,.jg').click(function(){
         $('.lpCount .show2').show();
        
     }else{
-        $('.lb').find('img').attr("src", r('../../assets/images/lb2.png'));
-        $('.jg').find('img').attr("src", r('../../assets/images/9g1.png'));
+        $('.lb').find('img').attr("src",'.'+ r('../../assets/images/lb2.png'));
+        $('.jg').find('img').attr("src",'.'+ r('../../assets/images/9g1.png'));
         $('.liebiao1 .col-md-12,.liebiao2 .col-md-12').removeClass('col-md-12').addClass('col-md-4');
         $('.lpCount .show2').hide();
         $('.lpCount .show1').show();

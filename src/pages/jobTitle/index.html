@@ -413,3 +413,15 @@
 </html>
 <script src="./assets/js/distpicker.data.js"></script>
 <script src="./assets/js/distpicker.js"></script>
+
+<script>
+    // $('[data-toggle="distpicker"]').find('select').eq(1).on('click', 'option', function() {
+    //     alert('5555')
+    // })
+
+
+    $('[data-toggle="distpicker"] select').eq(1).on('change', function() {
+        var pd = $(this).find("option:selected").text();
+        console.log(pd)
+    })
+</script>
